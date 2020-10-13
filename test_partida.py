@@ -22,27 +22,27 @@ class TestPartida(unittest.TestCase):
                                                 [None, None, None, None, None,
                                                  None], })
 
-"""
+
     # Verificar exceptions, palabra no puede ser vacia
     def test_exceptions_valor_inicial_palabra(self):
         with self.assertRaises(ValueError):
-            Partida('', 2, 'lenguaje de programacion', 'Claudio')
+            Partida('', 'lenguaje de programacion', 2, 'Claudio')
 
     # Verificar exceptions nombre_jugador no puede ser vacia
     def test_exceptions_valor_inicial_nombre_jugador(self):
         with self.assertRaises(ValueError):
-            Partida('Python', 2, 'lenguaje de programacion', '')
+            Partida('Python', 'lenguaje de programacion', 2, '')
 
     # Verificar exceptions tipo_palabra no puede ser vacia
     def test_exceptions_valor_inicial_tipo_palabra(self):
         with self.assertRaises(ValueError):
-            Partida('Python', 2, '', 'Claudio')
+            Partida('Python', '', 2, 'Claudio')
 
     # Verificar exceptions intentos no puede ser negativo,
     # anularia intentos
     def test_exceptions_valor_inicial_intentos(self):
         with self.assertRaises(ValueError):
-            Partida('Python', -1, 'lenguaje de programacion', 'Claudio')
+            Partida('Python', 'lenguaje de programacion', -1, 'Claudio')
 
     # La funcion iniciar_partida intancia un objeto del tipo Partida
     # Lo intentos que tiene el jugador depende de la longitud de la palabra
@@ -63,7 +63,7 @@ class TestPartida(unittest.TestCase):
                                                 '_palabra_aciertos':
                                                 [None, None, None, None,
                                                     None, None], })
-
+"""
     # La funcion iniciar_partida puede ser llamada sin palabra ni tipo de
     # palabra, esta busca en un reposotorio una palabra de manera random
     # return partida: Partida

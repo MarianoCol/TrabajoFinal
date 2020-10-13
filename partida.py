@@ -13,6 +13,8 @@ class Partida():
 
     @palabra.setter
     def palabra(self, palabra):
+        if palabra == '':
+            raise ValueError
         self._palabra = list(palabra.upper())
 
     @property
@@ -21,6 +23,8 @@ class Partida():
 
     @tipo_palabra.setter
     def tipo_palabra(self, tipo_palabra):
+        if tipo_palabra == '':
+            raise ValueError
         self._tipo_palabra = tipo_palabra
 
     @property
@@ -29,6 +33,8 @@ class Partida():
 
     @intentos.setter
     def intentos(self, intentos):
+        if intentos < 0:
+            raise ValueError
         self._intentos = intentos
 
     @property
@@ -37,6 +43,8 @@ class Partida():
 
     @nombre_jugador.setter
     def nombre_jugador(self, nombre_jugador):
+        if nombre_jugador == '':
+            raise ValueError
         self._nombre_jugador = nombre_jugador
 
     @property
