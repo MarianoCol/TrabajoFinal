@@ -63,7 +63,7 @@ class TestPartida(unittest.TestCase):
                                                 '_palabra_aciertos':
                                                 [None, None, None, None,
                                                     None, None], })
-"""
+
     # La funcion iniciar_partida puede ser llamada sin palabra ni tipo de
     # palabra, esta busca en un reposotorio una palabra de manera random
     # return partida: Partida
@@ -96,7 +96,7 @@ class TestPartida(unittest.TestCase):
     def test_get_random_palabra(self):
         palabra = ServicesPartidas().get_random_palabra()
         self.assertEqual(palabra, {'palabra': palabra.get('palabra'),
-                                   'tipo_palabra': palabra.get('tipo_palabra')}
+                                   'tipoPalabra': palabra.get('tipoPalabra')}
                          )
 
     # La funcion intentar_letra prueba si esta la letra en la partida.palabra
@@ -104,7 +104,7 @@ class TestPartida(unittest.TestCase):
     # si se temrminana los intentos muestra Perdio
     # si partida.palabra es igual a partida.palabra_aciertos muestra Gano
     # si todavia le quedan intentos y no completo palabra_aciertos muestra
-    # Continuo
+    # Continua
     @parameterized.expand([
         (1, ['P', 'Y', 'T', 'H', 'O', 'N'], 'Gano'),
         (2, ['M', 'R', 'P', 'Y', 'T', 'H', 'O', 'N'], 'Gano'),
@@ -132,6 +132,6 @@ class TestPartida(unittest.TestCase):
             for letra in letras:
                 servicePartida.intentar_letra(partida, letra)
 
-"""
+
 if __name__ == '__main__':
     unittest.main()

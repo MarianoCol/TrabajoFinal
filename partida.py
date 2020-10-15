@@ -54,3 +54,7 @@ class Partida():
     @palabra_aciertos.setter
     def palabra_aciertos(self, palabra_aciertos):
         self._palabra_aciertos = palabra_aciertos * len(self._palabra)
+
+#   @property
+#    def get.palabra(self):
+#        return self._palabra
