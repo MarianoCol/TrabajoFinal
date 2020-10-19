@@ -16,13 +16,16 @@ class ServicesPartidas():
             if intentos < 1 or intentos > 10:
                 raise ValueError
             else:
-                key = random.randint(0, len(palabras_json))
-                key -= key
+                key = random.randint(1, len(palabras_json))
+                key -= 1
                 numPalabra = palabras_json['%s'% key]
                 palabra = numPalabra['palabra']
                 tipoPalabra = numPalabra['tipoPalabra']
+                print("La palabra a adivinar esta relacionada con: ", tipoPalabra)
                 intentosTotales = intentos * len(list(palabra))
                 partida = Partida(palabra, tipoPalabra, intentosTotales, nombre)
+                print("\nLa palabra tiene ", len(palabra), " letras")
+                print("\n", partida.palabra_aciertos)
                 return partida
         else:
             intentosTotales = intentos * len(list(palabra))
@@ -42,7 +45,8 @@ class ServicesPartidas():
             if l == letra:
                 partida.palabra_aciertos[contador] = letra
                 a = True  
-            contador += 1  
+            contador += 1
+        print(partida.palabra_aciertos) 
         if partida.palabra_aciertos == partida.palabra:
             partida.intentos -= 1
             return "Gano"
