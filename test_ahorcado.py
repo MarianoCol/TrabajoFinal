@@ -29,7 +29,7 @@ class TestAhorcado(unittest.TestCase):
                    dificultad, palabra[0])):
             result = juego.un_jugador()
             self.assertEqual(result, True)
-"""
+
     @parameterized.expand([('Jugador1', 1, 'CELULAR', 'electronica',
                            ['C', 'E', 'L', 'U', 'L', 'A', 'R'],
                            'Jugador2', 1, 'computadora', 'electronica',
@@ -63,7 +63,7 @@ class TestAhorcado(unittest.TestCase):
                                                   palabra2[10])):
             result = juego.dos_jugadores()
             self.assertEqual(result, True)
-"""
+
 if __name__ == '__main__':
     unittest.main()
     

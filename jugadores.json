@@ -1,0 +1,48 @@
+{
+  "mariano": {
+    "_palabra": [
+      "P",
+      "E",
+      "L",
+      "O",
+      "T",
+      "A"
+    ],
+    "_tipo_palabra": "DEPORTES",
+    "_intentos": 5,
+    "_nombre_jugador": "MARIANO",
+    "_palabra_aciertos": [
+      "P",
+      "E",
+      "L",
+      "O",
+      "T",
+      "A"
+    ]
+  },
+  "juan": {
+    "_palabra": [
+      "R",
+      "I",
+      "V",
+      "O",
+      "T",
+      "R",
+      "I",
+      "L"
+    ],
+    "_tipo_palabra": "MEDICAMENTOS",
+    "_intentos": 0,
+    "_nombre_jugador": "JUAN",
+    "_palabra_aciertos": [
+      "R",
+      "I",
+      "V",
+      "O",
+      "T",
+      "R",
+      "I",
+      "L"
+    ]
+  }
+}
