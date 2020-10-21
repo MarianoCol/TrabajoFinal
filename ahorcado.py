@@ -2,6 +2,7 @@ import json
 from partida import Partida
 from servicesPartidas import ServicesPartidas
 
+
 class Ahorcado():
     pass
 
@@ -15,7 +16,7 @@ class Ahorcado():
         servis = ServicesPartidas()
         nombreJugador = str(input("Ingrese su nombre: "))
         intentosJugador = int(input("Ingrese la dificultad: "))
-        p = servis.iniciar_partida(nombreJugador, intentosJugador,'','')
+        p = servis.iniciar_partida(nombreJugador, intentosJugador, '', '')
         for i in range(0, p.intentos):
             letra = input("\nIngrese una letra para adivinar: ")
             if letra == 'salir':
@@ -28,10 +29,10 @@ class Ahorcado():
     def dos_jugadores(self):
         dicJugadores = {}
         servis = ServicesPartidas()
-        for j in range(0,2):
+        for j in range(0, 2):
             nombreJugador = str(input("Ingrese su nombre: "))
             intentosJugador = int(input("Ingrese la dificultad: "))
-            palabra = str(input("J2 ingrese una palabra para el J1: "))
+            palabra = str(input("Ingrese una palabra para %s: "%nombreJugador))
             tipoPalabra = str(input("Ingrese el tipo de palabra: "))
             p = servis.iniciar_partida(nombreJugador, intentosJugador, palabra, tipoPalabra)
             for i in range(0, p.intentos):
@@ -41,11 +42,16 @@ class Ahorcado():
                 respuesta = servis.intentar_letra(p, letra.upper())
                 print(respuesta)
                 if respuesta == 'Gano' or respuesta == 'Perdio':
-                    break
-            dicJugadores[nombreJugador] = p.__dict__
-        with open ('jugadores.json', 'w') as f:
-            json.dump(dicJugadores, f, indent=2)   
-        return True
+                    if j == 0:
+                        dicJugadores[nombreJugador] = p.__dict__
+                        break
+                    else:
+                        dicJugadores[nombreJugador] = p.__dict__
+                        with open ('jugadores.json', 'w') as f:
+                            json.dump(dicJugadores, f, indent=2)
+                        return True
+            
+
 
 if __name__ == "__main__":
     ahorcado = Ahorcado()

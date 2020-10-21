@@ -6,7 +6,6 @@ import json
 with open('palabras.json', 'r') as f:
     palabras_json = json.load(f)
 
-#palabras = {0: {'palabra': 'peru', 'tipoPalabra': 'paises'}, 1: {'palabra': 'python', 'tipoPalabra': 'lenguaje de programacion'}, 2: {'palabra': 'dota', 'tipoPalabra': 'videojuegos'}}
 
 class ServicesPartidas():
     pass

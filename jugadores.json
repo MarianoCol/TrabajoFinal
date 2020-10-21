@@ -1,48 +1,56 @@
 {
-  "mariano": {
+  "Jugador1": {
     "_palabra": [
-      "P",
+      "C",
       "E",
       "L",
-      "O",
-      "T",
-      "A"
+      "U",
+      "L",
+      "A",
+      "R"
     ],
-    "_tipo_palabra": "DEPORTES",
-    "_intentos": 5,
-    "_nombre_jugador": "MARIANO",
+    "_tipo_palabra": "ELECTRONICA",
+    "_intentos": 0,
+    "_nombre_jugador": "JUGADOR1",
     "_palabra_aciertos": [
-      "P",
+      "C",
       "E",
       "L",
-      "O",
-      "T",
-      "A"
+      "U",
+      "L",
+      "A",
+      "R"
     ]
   },
-  "juan": {
+  "Jugador2": {
     "_palabra": [
-      "R",
-      "I",
-      "V",
+      "C",
       "O",
+      "M",
+      "P",
+      "U",
       "T",
+      "A",
+      "D",
+      "O",
       "R",
-      "I",
-      "L"
+      "A"
     ],
-    "_tipo_palabra": "MEDICAMENTOS",
-    "_intentos": 0,
-    "_nombre_jugador": "JUAN",
+    "_tipo_palabra": "ELECTRONICA",
+    "_intentos": 1,
+    "_nombre_jugador": "JUGADOR2",
     "_palabra_aciertos": [
-      "R",
-      "I",
-      "V",
+      "C",
       "O",
+      "M",
+      "P",
+      "U",
       "T",
+      "A",
+      "D",
+      "O",
       "R",
-      "I",
-      "L"
+      "A"
     ]
   }
 }
