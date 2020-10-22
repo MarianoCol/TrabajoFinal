@@ -1,6 +1,6 @@
-{"0": {"palabra": "peru", "tipoPalabra": "paises"},
-  "1": {"palabra": "python", "tipoPalabra": "lenguaje de programacion"},
-  "2": {"palabra": "dota", "tipoPalabra": "videojuegos"},
-  "3": {"palabra": "go", "tipoPalabra": "lenguaje de programacion"},
-  "4": {"palabra": "angular", "tipoPalabra": "lenguaje de programacion"},
-  "5": {"palabra": "javascript", "tipoPalabra": "lenguaje de programacion"}}
+{"0": {"palabra": "peru", "tipo_palabra": "paises"},
+  "1": {"palabra": "python", "tipo_palabra": "lenguaje de programacion"},
+  "2": {"palabra": "dota", "tipo_palabra": "videojuegos"},
+  "3": {"palabra": "go", "tipo_palabra": "lenguaje de programacion"},
+  "4": {"palabra": "angular", "tipo_palabra": "lenguaje de programacion"},
+  "5": {"palabra": "javascript", "tipo_palabra": "lenguaje de programacion"}}

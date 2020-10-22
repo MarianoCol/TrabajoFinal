@@ -11,7 +11,7 @@ class TestPartida(unittest.TestCase):
     # tipo_palabra: para dar orientacion al jugador
     # palabra: palabra que tiene que adivinar
     def test_constructor_con_valores_iniciales_partida(self):
-        partida = Partida('python', 'lenguaje de programacion', 2, 'Claudio')
+        partida = Partida('python', 2, 'lenguaje de programacion', 'Claudio')
         self.assertDictEqual(partida.__dict__, {'_palabra':
                                                 ['P', 'Y', 'T', 'H', 'O', 'N'],
                                                 '_tipo_palabra':
@@ -26,23 +26,23 @@ class TestPartida(unittest.TestCase):
     # Verificar exceptions, palabra no puede ser vacia
     def test_exceptions_valor_inicial_palabra(self):
         with self.assertRaises(ValueError):
-            Partida('', 'lenguaje de programacion', 2, 'Claudio')
+            Partida('', 2, 'lenguaje de programacion', 'Claudio')
 
     # Verificar exceptions nombre_jugador no puede ser vacia
     def test_exceptions_valor_inicial_nombre_jugador(self):
         with self.assertRaises(ValueError):
-            Partida('Python', 'lenguaje de programacion', 2, '')
+            Partida('Python', 2, 'lenguaje de programacion', '')
 
     # Verificar exceptions tipo_palabra no puede ser vacia
     def test_exceptions_valor_inicial_tipo_palabra(self):
         with self.assertRaises(ValueError):
-            Partida('Python', '', 2, 'Claudio')
+            Partida('Python', 2, '', 'Claudio')
 
     # Verificar exceptions intentos no puede ser negativo,
     # anularia intentos
     def test_exceptions_valor_inicial_intentos(self):
         with self.assertRaises(ValueError):
-            Partida('Python', 'lenguaje de programacion', -1, 'Claudio')
+            Partida('Python', -1, 'lenguaje de programacion', 'Claudio')
 
     # La funcion iniciar_partida intancia un objeto del tipo Partida
     # Lo intentos que tiene el jugador depende de la longitud de la palabra
@@ -96,7 +96,7 @@ class TestPartida(unittest.TestCase):
     def test_get_random_palabra(self):
         palabra = ServicesPartidas().get_random_palabra()
         self.assertEqual(palabra, {'palabra': palabra.get('palabra'),
-                                   'tipoPalabra': palabra.get('tipoPalabra')}
+                                   'tipo_palabra': palabra.get('tipo_palabra')}
                          )
 
     # La funcion intentar_letra prueba si esta la letra en la partida.palabra
@@ -104,7 +104,7 @@ class TestPartida(unittest.TestCase):
     # si se temrminana los intentos muestra Perdio
     # si partida.palabra es igual a partida.palabra_aciertos muestra Gano
     # si todavia le quedan intentos y no completo palabra_aciertos muestra
-    # Continua
+    # Continuo
     @parameterized.expand([
         (1, ['P', 'Y', 'T', 'H', 'O', 'N'], 'Gano'),
         (2, ['M', 'R', 'P', 'Y', 'T', 'H', 'O', 'N'], 'Gano'),

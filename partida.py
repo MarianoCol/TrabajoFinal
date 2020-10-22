@@ -1,6 +1,6 @@
 class Partida():
 
-    def __init__(self, palabra='', tipo_palabra='', intentos=0, nombre_jugador='', palabra_aciertos=[None]):
+    def __init__(self, palabra='', intentos=0, tipo_palabra='', nombre_jugador='', palabra_aciertos=[None]):
         self.palabra = palabra
         self.tipo_palabra = tipo_palabra.upper()
         self.intentos = intentos
@@ -55,6 +55,4 @@ class Partida():
     def palabra_aciertos(self, palabra_aciertos):
         self._palabra_aciertos = palabra_aciertos * len(self._palabra)
 
-#   @property
-#    def get.palabra(self):
-#        return self._palabra
+

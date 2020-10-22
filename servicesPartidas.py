@@ -19,19 +19,19 @@ class ServicesPartidas():
                 key -= 1
                 numPalabra = palabras_json['%s'% key]
                 palabra = numPalabra['palabra']
-                tipoPalabra = numPalabra['tipoPalabra']
+                tipoPalabra = numPalabra['tipo_palabra']
                 print("La palabra a adivinar esta relacionada con: ", tipoPalabra, palabra)
                 intentosTotales = intentos * len(list(palabra))
-                partida = Partida(palabra, tipoPalabra, intentosTotales, nombre)
+                partida = Partida(palabra, intentosTotales, tipoPalabra, nombre)
                 print("\nLa palabra tiene ", len(palabra), " letras")
-                print("\n", partida.palabra_aciertos)
+                print("\n", partida._palabra_aciertos)
                 return partida
         else:
             print("La palabra a adivinar esta relacionada con: ", tipoPalabra)
             intentosTotales = intentos * len(list(palabra))
-            partida = Partida(palabra, tipoPalabra, intentosTotales, nombre)
+            partida = Partida(palabra, intentosTotales, tipoPalabra, nombre)
             print("\nLa palabra tiene ", len(palabra), " letras")
-            print("\n", partida.palabra_aciertos)
+            print("\n", partida._palabra_aciertos)
             return partida
 
     def get_random_palabra(self):
@@ -43,13 +43,13 @@ class ServicesPartidas():
     def intentar_letra(self, partida, letra):
         contador = 0
         a = False
-        for l in partida.palabra: 
+        for l in partida._palabra: 
             if l == letra:
-                partida.palabra_aciertos[contador] = letra
+                partida._palabra_aciertos[contador] = letra
                 a = True  
             contador += 1
-        print(partida.palabra_aciertos) 
-        if partida.palabra_aciertos == partida.palabra:
+        print(partida._palabra_aciertos) 
+        if partida._palabra_aciertos == partida._palabra:
             partida.intentos -= 1
             return "Gano"
         elif a != True:
@@ -60,7 +60,10 @@ class ServicesPartidas():
                 return "Continua"
         else:
             partida.intentos -= 1
-            return "Continua"        
+            if partida.intentos == 0:
+                return "Perdio"
+            else:
+                return "Continua"        
 
 #if __name__ == "__main__": 
  #       key = random.randint(1, len(palabras_json))
