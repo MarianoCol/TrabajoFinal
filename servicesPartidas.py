@@ -20,7 +20,7 @@ class ServicesPartidas():
                 numPalabra = palabras_json['%s'% key]
                 palabra = numPalabra['palabra']
                 tipoPalabra = numPalabra['tipo_palabra']
-                print("La palabra a adivinar esta relacionada con: ", tipoPalabra, palabra)
+                print("La palabra a adivinar esta relacionada con: ", tipoPalabra)
                 intentosTotales = intentos * len(list(palabra))
                 partida = Partida(palabra, intentosTotales, tipoPalabra, nombre)
                 print("\nLa palabra tiene ", len(palabra), " letras")
