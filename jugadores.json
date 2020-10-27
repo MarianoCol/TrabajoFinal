@@ -1,0 +1,56 @@
+{
+  "Jugador1": {
+    "_palabra": [
+      "C",
+      "E",
+      "L",
+      "U",
+      "L",
+      "A",
+      "R"
+    ],
+    "_tipo_palabra": "ELECTRONICA",
+    "_intentos": 0,
+    "_nombre_jugador": "JUGADOR1",
+    "_palabra_aciertos": [
+      "C",
+      "E",
+      "L",
+      "U",
+      "L",
+      "A",
+      "R"
+    ]
+  },
+  "Jugador2": {
+    "_palabra": [
+      "C",
+      "O",
+      "M",
+      "P",
+      "U",
+      "T",
+      "A",
+      "D",
+      "O",
+      "R",
+      "A"
+    ],
+    "_tipo_palabra": "ELECTRONICA",
+    "_intentos": 1,
+    "_nombre_jugador": "JUGADOR2",
+    "_palabra_aciertos": [
+      "C",
+      "O",
+      "M",
+      "P",
+      "U",
+      "T",
+      "A",
+      "D",
+      "O",
+      "R",
+      "A"
+    ]
+  }
+}
