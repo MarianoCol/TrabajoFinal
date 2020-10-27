@@ -1,5 +1,4 @@
 import random
-from repositorio import Repositorio
 from partida import Partida
 import json
 

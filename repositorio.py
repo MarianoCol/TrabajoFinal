@@ -1,2 +1,0 @@
-class Repositorio():
-    palabras = dict()
